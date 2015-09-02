@@ -1,0 +1,13 @@
+.DS_Store
+
+*.jpg
+*.png
+*.pdf
+*.pyc
+
+face/caffe
+face/cnn_age_gender_models_and_data.0.0.2
+face/haarcascade_frontalface_default.xml
+
+object/dlib
+object/fast-rcnn

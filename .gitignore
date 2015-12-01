@@ -1,0 +1,12 @@
+.DS_Store
+.remote-sync.json
+Anaconda*
+
+*.jpg
+*.png
+*.pdf
+*.pyc
+*.zip
+*.gz
+*.tgz
+*.run

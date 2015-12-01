@@ -1,0 +1,5 @@
+#! /bin/bash
+
+cd /root/face && nohup python server.py &
+cd /root/object && nohup python server.py &
+cd /root && python server.py

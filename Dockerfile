@@ -10,6 +10,7 @@ RUN apt-get clean && apt-get autoclean && apt-get autoremove
 WORKDIR /root
 COPY Anaconda2-2.4.0-Linux-x86_64.sh /root/
 RUN cd /root && bash Anaconda2-2.4.0-Linux-x86_64.sh -b
+RUN rm -rf Anaconda2-2.4.0-Linux-x86_64.sh
 ENV PATH /root/anaconda2/bin:$PATH
 RUN conda update conda -y
 RUN pip install lmdb
@@ -108,4 +109,5 @@ RUN cd /root/object/dlib && python setup.py install
 RUN nohup python server.py &
 
 WORKDIR /root
-CMD /root/anaconda2/bin/python /root/server.py
+COPY start_server /root/
+RUN chmod +x start_server
